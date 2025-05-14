@@ -5,7 +5,7 @@ def ListPrime(list):
     for i in range(len(list)):
         if(M.ChkPrime(list[i])):
             sum += list[i]
-            print(list[i])
+            
     return sum
 
 def main():

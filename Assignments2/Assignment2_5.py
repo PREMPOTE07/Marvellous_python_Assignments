@@ -9,7 +9,7 @@ def CheckPrime(num):
 def main():
     no = int(input("Enter the Number: "))
     if no > 1:
-        result = ChkPrime(no)
+        result = CheckPrime(no)
         if result:
            print("Given Number is Prime")
         else:

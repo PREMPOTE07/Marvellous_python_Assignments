@@ -1,29 +1,21 @@
 import schedule
 import time
 import datetime
-import os
-import shutil
 
-Source_File = "original_data.txt"
-Backup_File = "backup_data.txt"
-Log_File = "backup_log.txt"
-def BackupFile():
+
+def check_email():
     
-    if os.path.exists(Source_File):
-        shutil.copy(Source_File,Backup_File)
-        log_time = f"{datetime.datetime.now()}: Backup Sucessfule\n"
-    
-    else:
-        log_time = "File not found"
-        
-    log = open(Log_File,"a")
-    log.write(log_time)
+   print("Cheking email ....")
+   
+   fname = open("Email Updates.log","a")
+   
+   fname.write(f"check email at {str(datetime.datetime.now())} \n")
+   
+   fname.close()
     
 def main():
      
-    schedule.every().hour.do(BackupFile)
-    
-    print("Backup running....")
+    schedule.every(10).seconds.do(check_email)
     
     while True:
         schedule.run_pending()

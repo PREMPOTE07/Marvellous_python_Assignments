@@ -342,8 +342,8 @@ def DuplicateFilesLogEmail(dirName , toEmail):
     count = DeleteDuplicate(dirName)
     
      #email logic
-    my_Email = "prempote4822@gmail.com"
-    my_password = "wykx ijkh vlqs yeok"
+    my_Email = "type your email"
+    my_password = "email app password"
     mail_content = EmailMessage()
     
     mail_content['subject'] =""
